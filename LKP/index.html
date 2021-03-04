@@ -1,0 +1,145 @@
+<!-- Сообщаем браузеру как стоит обрабатывать эту страницу -->
+<!DOCTYPE html>
+<!-- Оболочка документа, указываем язык содержимого -->
+<html lang="ru">
+<!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
+
+<head>
+	<!-- Заголовок страницы в браузере -->
+	<title>Личный кабинет техподдержки</title>
+	<!-- Подключаем CSS -->
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/media.css" />
+	<!--Подключаем favicon-->
+	<link rel="shortcut icon" href="../LKP/img/icons/favicon.ico" type="image/png">
+	<!--Подключаем шрифты-->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+	<!-- Кодировка страницы -->
+	<meta charset="UTF-8"/>
+	<!--Адаптив-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<!-- Отображаемое тело страницы -->
+<body>
+	<header class="header">
+		<a class="header__logo" href="#" >
+			<img class="header__logo-img" src="../LKP/img/logo.svg" alt="">
+		</a>
+		<nav class="header__menu">
+			<ul class="header__menu-list">
+				<li class="header__menu-list--item">
+					<a class="header__menu-list--link" href="#">
+						<img class="header__menu-link--icon" src="../LKP/img/house.svg" alt="">
+					</a>
+				</li>
+				<li class="header__menu-list--item">
+					<a class="header__menu-list--link" href="#">
+						<img class="header__menu-link--icon" src="../LKP/img/users.svg" alt="">
+					</a>
+				</li>
+				<li class="header__menu-list--item">
+					<a class="header__menu-list--link" href="#">
+						<img class="header__menu-link--icon" src="../LKP/img/vin.svg" alt="">
+					</a>
+				</li>
+				<li class="header__menu-list--item">
+					<a class="header__menu-list--link" href="#">
+						<img class="header__menu-link--icon" src="../LKP/img/settings.svg" alt="">
+					</a>
+				</li>
+				<li class="header__menu-list--item">
+					<a class="header__menu-list--link" href="#">
+						<img class="header__menu-link--icon" src="../LKP/img/logout.svg" alt="">
+					</a>
+				</li>
+			</ul>
+		</nav>	
+	</header>
+	<!-- Сайдбар -->
+	<div class="page">
+		<aside class="sidebar">
+			<a class="sidebar__logo" href="#" >
+				<img class="sidebar__logo-img" src="../LKP/img/logo.svg" alt="">
+			</a>
+			<span >Версия <a class="sidebar__version" target="blank" href="../LKP/version.html">0.3.0b</a></span>
+			<nav class="sidebar__menu">
+				<ul class="menu__list">
+					<li class="menu__list-item">
+						<a class="menu__list-link" href="#">
+							<img class="menu__link-icon" src="../LKP/img/house.svg" alt="">
+							<span class="menu__link-text">Главная</span>
+						</a>
+					</li>
+					<li class="menu__list-item">
+						<a class="menu__list-link" href="#">
+							<img class="menu__link-icon" src="../LKP/img/users.svg" alt="">
+							<span class="menu__link-text">Пользователи</span>
+						</a>
+					</li>
+					<li class="menu__list-item">
+						<a class="menu__list-link" href="#">
+							<img class="menu__link-icon" src="../LKP/img/vin.svg" alt="">
+							<span class="menu__link-text">Сравнить хэши</span>
+						</a>
+					</li>
+					<li class="menu__list-item">
+						<a class="menu__list-link" href="#">
+							<img class="menu__link-icon" src="../LKP/img/settings.svg" alt="">
+							<span class="menu__link-text">Настройки</span>
+						</a>
+					</li>
+					<li class="menu__list-item">
+						<a class="menu__list-logout" href="#">
+							<img class="menu__link-icon" src="../LKP/img/logout.svg" alt="">
+						</a>
+					</li>
+				</ul>
+			</nav>	
+		</aside> 
+		
+		<!--Блок сравнения-->
+		<section class="content">
+			<div class="container">
+				<h1 class="content__title title">
+					Сравнить хэши
+					<span></span>
+				</h1>
+				<!--Сравнение-->
+				<div class="compare">
+					<div class="compare__items">
+						<div class="compaire__item">
+							<textarea class="item-input" name="crm" id="crm"></textarea>
+							<span class="item-text crm">CRM</span>
+						</div>
+						<div class="compaire__item">
+							<textarea class="item-input" name="edo" id="edo"></textarea>
+							<span class="item-text edo">EDO</span>
+						</div>
+						
+					</div>
+					<div class="compare__buttons">
+						<button class="compaire__item-btn" type="submit" id="target">Сравнить</button>
+						<button class="compaire__item-btn btn-reset" type="reset" id="">Очистить</button>
+					</div>
+					<div class="compare__result">
+						<h3 class="result__title title">
+							Результат сравнения:
+						</h3>	
+						<div class="result__item">
+							<p id = "result-crm"> </p><br>
+							<p id = "result-edo"> </p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+	
+	<!--Подключаем JQuery-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<!--скрипт сравнения-->
+	<script src='./js/script.js'></script>
+	<script src="./js/compare.js"></script>
+</body>
+</html>
