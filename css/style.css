@@ -103,10 +103,11 @@ body {
 .header{
   display: none;
   align-items: center;
+  border-radius: 0 0 10px 10px;
   height: 60px;
-  background: radial-gradient(131.44% 131.44% at 35.31% 0%, rgba(255, 249, 196, 0.5) 0%, rgba(255, 249, 196, 0) 100%), #FFCC00;
+  background: linear-gradient(126deg, rgba(0,123,255,1) 0%, rgba(102,16,242,1) 50%);
+  background: linear-gradient(126deg, rgba(0,123,255,1) 0%, rgba(102,16,242,1) 50%);
   backdrop-filter: blur(9px);
-
 }
 .header__logo{
   padding-left: 20px;
@@ -114,7 +115,7 @@ body {
 .header__logo-img {
   width: 45px;
   height: 45px;
-  object-fit: cover;
+  object-fit: contain;
   padding: 5px;
   background: #fff;
   border-radius: 50%;
@@ -125,12 +126,6 @@ body {
 .header__menu-list {
   display: flex;
   justify-content: space-around;
-}
-.header__menu-list--item {
-}
-.header__menu-list--link {
-}
-.header__menu-link--icon {
 }
 
 .page{
@@ -149,8 +144,9 @@ body {
   width: 180px;
   height: 800px;
   border-radius: 54px;
-  background: radial-gradient(131.44% 131.44% at 35.31% 0%, rgba(255, 249, 196, 0.5) 0%, rgba(255, 249, 196, 0) 100%), #FFCC00;
+  background: linear-gradient(126deg, rgba(0,123,255,1) 0%, rgba(102,16,242,1) 50%);
   backdrop-filter: blur(9px);
+
 }
 .sidebar__logo {
   padding-top: 40px;
@@ -158,9 +154,9 @@ body {
   
 }
 .sidebar__logo-img {
-  width: 85px;
-  height: 85px;
-  object-fit: cover;
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
   padding: 10px;
   background: #fff;
   border-radius: 50%;
@@ -175,13 +171,10 @@ body {
 .sidebar__version:hover{
   color: #fff;
 }
-.sidebar__menu {
-}
-.menu__list {
-}
 .menu__list-item {
   display: flex;
-  margin-bottom: 20px;
+  justify-content: space-between;
+  margin-bottom: 30px;
 }
 .menu__list-link {
   display: flex;
@@ -191,10 +184,19 @@ body {
   height: 44px;
   border-radius: 22px 0px 0px 22px;
   transition: all .9s;
+  font-weight: 550;
+  line-height: 25px;
+  color: white;
+ 
 }
 .menu__list-link:hover{
   background: #FFFFFF;
+  color: black;
   
+}
+.menu__list-link.active{
+  background: #FFFFFF;
+  color: black;
 }
 .menu__list-logout{
   padding-top: 50px;
@@ -208,20 +210,18 @@ body {
   padding-left: 10px;
   margin-right: 10px;
 }
-.menu__link-text {
-  color: #000;
-  line-height: 25px;
 
+.menu__link-text:hover {
+  color: #000;
 }
+
+
 
 .content {
   margin: 0 auto;
   align-self: center;
 }
-.container {
-  
-  
-}
+
 .content__title {
   padding-top: 50px;
   text-align: center;
@@ -236,8 +236,6 @@ body {
   padding-bottom: 10px;
 }
 
-.compare {
-}
 .compare__items {
   display: flex;
   
@@ -279,15 +277,12 @@ body {
   margin-left: 10px;
 }
 .crm::after{
-  background-color: #fc0;
+  background-color: #c19efa;
 }
 .edo::after{
-  background-color: #19ff19;
+  background-color: #007bff;
 }
-.compaire__item-edo {
-}
-.edo__input {
-}
+
 .compare__buttons{
   display: flex;
   justify-content: center;
@@ -296,22 +291,21 @@ body {
   font-weight: 500;
   padding: 10px 30px;
   border-radius: 10px;
-  background-color: #ffcc00;
+  background-color: #6610f2;
+  color: #FFFFFF;
   font-size: 16px;
+  font-weight: 550;
   margin: 0 20px 50px 0px;
   transition: all .4s;
   
 }
 .compaire__item-btn:hover{
-  background-color: #fcd640fd;
+  background-color: #007bff;
 }
 .compare__result {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
-}
-.result__title {
   
 }
 .result__item {
