@@ -8,7 +8,3 @@ $( "#target" ).click(function() {
 	const ds = dmp.diff_prettyHtml(d);
 	document.getElementById('result-crm').innerHTML = ds;
 });
-
-$('html').on('click','.btn-reset',function (){
-	$('.item-input').val(" ");
-  }); 
